@@ -1,0 +1,54 @@
+:root {
+    --branco: #f3f3f3;
+    --darkblue: #1b1b32;
+    --darkblue_alpha:  rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--branco);
+}
+
+body::before{
+    content: '';
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    filter: blur(1px);
+    background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.cabecalho__texto{
+    font-style: italic;
+}
+
+form label{
+    display: block;
+}

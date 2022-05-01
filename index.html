@@ -5,14 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Pesquisa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <div class="container">
         <header class="cabecalho">
-            <h1 class="cabecalho__titulo"></h1>
-            <p class="cabecalho__texto"></p>
+            <h1 class="cabecalho__titulo">freeCodeCamp Survey Form</h1>
+            <p class="cabecalho__texto">Thank you for taking the time to help us improve the platform</p>
         </header>
+        <form>
+            <label for="nomesobrenome">Name</label>
+            <input type="text" id="nomesobrenome" class="input-patrao" required placeholder="Enter your name">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" class="input-patrao" required placeholder="Enter your Email">
+
+            <label for="idade">Age (optional)</label>
+            <input type="number" id="idade" min="10" max="99" placeholder="Age">
+
+            <fieldset>
+                <legend>Which option best describes your current role?</legend>
+                <select name="afazer" id="dropdown" required>
+                    <option disabled selected>Select current role</option>
+                    <option value="estudante">Student</option>
+                    <option value="trabalho">Full Time Job</option>
+                    <option value="aprendiz">Full Time Learner</option>
+                    <option value="prefNao">Prefer not to say</option>
+                    <option value="outro">Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                <label for="radio-recomenda"><input type="radio" name="recomenda" value="definitivamente" id="radio-recomenda" checked>Definitely</label>
+                <label for="radio-talvez"><input type="radio" name="recomenda" value="talvez" id="radio-talvez">Maybe</label>
+                <label for="radio-nao"><input type="radio" name="recomenda" value="not" id="radio-nao">Not Sure</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What is your favorite feature of freeCodeCamp?</legend>
+                <select name="funcionalidade" id="gosto" required>
+                    <option disabled selected>Select an option</option>
+                    <option value="estudante">Challenges</option>
+                    <option value="trabalho">Projects</option>
+                    <option value="aprendiz">Community</option>
+                    <option value="prefNao">Open Source</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>What would you like to see improved? (Check all that apply)</legend>
+                <label for="check-front"><input type="checkbox" name="prefere" id="check-front"> Front-end Projects</label>
+                <label for="check-back"><input type="checkbox" name="prefere" id="check-back"> Back-end Projects</label>
+                <label for="check-di"><input type="checkbox" name="prefere" id="check-di"> Data Visualization</label>
+                <label for="check-chall"><input type="checkbox" name="prefere" id="check-chall"> Challenges</label>
+                <label for="check-opc"><input type="checkbox" name="prefere" id="check-opc"> Open Source Community</label>
+                <label for="check-help"><input type="checkbox" name="prefere" id="check-help"> Gitter help rooms</label>
+                <label for="check-videos"><input type="checkbox" name="prefere" id="check-videos"> Videos</label>
+                <label for="check-city"><input type="checkbox" name="prefere" id="check-city"> City Meetups</label>
+                <label for="check-wiki"><input type="checkbox" name="prefere" id="check-wiki"> Wiki</label>
+                <label for="check-forum"><input type="checkbox" name="prefere" id="check-forum"> Forum</label>
+                <label for="check-add"><input type="checkbox" name="prefere" id="check-add"> Additional Courses</label>
+            </fieldset>
+
+            <fieldset>
+                <label for="texto">Any comments or suggestions?</label>
+                <textarea name="area-texto" class="input-textarea" id="texto" cols="60" rows="10"></textarea>
+            </fieldset>
+
+            <div>
+                <button type="submit" class="button_submit">Submit</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
